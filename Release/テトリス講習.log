@@ -1,0 +1,2 @@
+﻿MSVCRT.lib(exe_main.obj) : error LNK2001: 外部シンボル "_main" は未解決です。
+C:\Users\zxxp1\source\repos\テトリス講習\Release\テトリス講習.exe : fatal error LNK1120: 1 件の未解決の外部参照
