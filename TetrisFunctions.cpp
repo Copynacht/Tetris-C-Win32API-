@@ -229,8 +229,8 @@ void LeftRotateBlock() {
 			if (blocks[x][y].status == 2) {
 				xFromOrigin = x - originX;
 				yFromOrigin = y - originY;
-				if (1 > -1 * yFromOrigin && -1 * yFromOrigin > 10)return;
-				if (0 > xFromOrigin && xFromOrigin > 18)return;
+				if (1 > originX + (-1 * yFromOrigin) && originX + (-1 * yFromOrigin) > 10)return;
+				if (0 > originY + xFromOrigin && originY + xFromOrigin > 18)return;
 				if(subBlocks[originX + (-1 * yFromOrigin)][originY + xFromOrigin].status != 0)return;
 				subBlocks[originX + (-1 * yFromOrigin)][originY + xFromOrigin].status = blocks[x][y].status;
 				subBlocks[originX + (-1 * yFromOrigin)][originY + xFromOrigin].color = blocks[x][y].color;
@@ -278,8 +278,8 @@ void RightRotateBlock() {
 			if (blocks[x][y].status == 2) {
 				xFromOrigin = x - originX;
 				yFromOrigin = y - originY;
-				if (1 > yFromOrigin && yFromOrigin > 10)return;
-				if (0 > -1 * xFromOrigin && -1 * xFromOrigin > 18)return;
+				if (1 > originX + yFromOrigin && originX + yFromOrigin > 10)return;
+				if (0 > originY + (-1 * xFromOrigin) && originY + (-1 * xFromOrigin) > 18)return;
 				if (subBlocks[originX + yFromOrigin][originY + (-1 * xFromOrigin)].status != 0)return;
 				subBlocks[originX + (yFromOrigin)][originY + (-1 * xFromOrigin)].status = blocks[x][y].status;
 				subBlocks[originX + (yFromOrigin)][originY + (-1 * xFromOrigin)].color = blocks[x][y].color;
